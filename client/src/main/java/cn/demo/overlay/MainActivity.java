@@ -1,7 +1,6 @@
 package cn.demo.overlay;
 
 import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -26,12 +25,11 @@ public class MainActivity extends AppCompatActivity implements LauncherClientCal
     private static final String SERVER_PKG = "cn.demo.server";
     private LauncherClient launcherClient;
 
-    @TargetApi(Build.VERSION_CODES.O_MR1)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O_MR1)
             setShowWhenLocked(true);
         else
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);

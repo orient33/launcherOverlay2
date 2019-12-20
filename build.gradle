@@ -4,12 +4,13 @@ buildscript {
     ext._compileSdkVer = 28
     ext._targetSdkVer = 28
     ext._minSdk = 21
+    ext.xAppCompatVer = "1.1.0"
     repositories {
         google()
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.1'
+        classpath 'com.android.tools.build:gradle:3.5.3'
     }
 }
 
